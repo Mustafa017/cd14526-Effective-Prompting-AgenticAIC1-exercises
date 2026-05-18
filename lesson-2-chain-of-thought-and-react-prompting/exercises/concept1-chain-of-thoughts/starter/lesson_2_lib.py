@@ -48,7 +48,7 @@ def get_completion(system_prompt, user_prompt, model="gpt-4.1-nano", client = No
 
     
 def get_sales_data(products: Optional[List[str]] = None) -> List[Dict[str, Any]]:
-    data = [
+    data: List[Dict[str, Any]] = [
         {
             "date": datetime.date(2024, 1, 10),
             "product_id": "P001",
@@ -303,7 +303,7 @@ def get_sales_data(products: Optional[List[str]] = None) -> List[Dict[str, Any]]
 def get_promotions_data() -> List[Dict[str, Any]]:
     import datetime
 
-    data = [
+    data:List[Dict[str, Any]] = [
         {
             "promotion_id": "PROMO001",
             "name": "Weekend Special",
@@ -325,7 +325,7 @@ def get_promotions_data() -> List[Dict[str, Any]]:
 
 
 def get_weather_data() -> List[Dict[str, Any]]:
-    data = [
+    data: List[Dict[str, Any]] = [
         {
             "date": "2024-01-10",
             "temperature": {"fahrenheit": 23.4, "celsius": -4.8},
@@ -407,8 +407,8 @@ def call_weather_api(date: str) -> Dict[str, Any]:
     return data[date]
 
 
-def get_competitor_pricing_data():
-    data = [
+def get_competitor_pricing_data() -> List[Dict[str, Any]]:
+    data: List[Dict[str, Any]] = [
         {
             "product": "Product 1",
             "date": "2024-01-10",
@@ -864,7 +864,7 @@ def call_competitor_pricing_api(
 SINGLE_TAB_LEVEL = 4
 
 
-def print_in_box(text, title="", cols=100, tab_level=0):
+def print_in_box(text:str, title:str="", cols:int=100, tab_level:int=0):
     """
     Prints the given text in a box with the specified title and dimensions.
 
