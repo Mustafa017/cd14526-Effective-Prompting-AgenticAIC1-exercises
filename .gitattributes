@@ -1,1 +1,5 @@
+# What happened: Your .gitattributes routes all *.ipynb files through a git clean filter that runs jupyter nbconvert 
+# --ClearOutputPreprocessor.enabled=True ... to strip cell outputs before staging. 
+# The jupyter.exe in your .venv was found, but nbconvert wasn't installed in that environment — it is now.
+
 *.ipynb filter=strip-notebook-output
